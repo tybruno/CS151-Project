@@ -1,8 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-//Main class
-public class DroneGame {
+public class ImagePanelTester {
     public static void main(String[] args)
     {
         String dronePath = ".DroneGame/drone.jpg";

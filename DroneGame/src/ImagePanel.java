@@ -6,19 +6,25 @@ import java.io.File;
 import java.io.IOException;
 
 public class ImagePanel extends JPanel {
-    private BufferedImage image;
+    private Image image;
     private int x;
     private int y;
 
-    public ImagePanel(String filename,int x,int y){
-
-        try{
-            this.image = ImageIO.read(new File(filename));
-            this.x = x;
-            this.y = y;
-        }
-        catch(IOException ex){
+    public ImagePanel(String filename,int x,int y){                  
+        
+        this.x = x;
+        this.y = y;
+            
+        ClassLoader cldr = this.getClass().getClassLoader();
+        java.net.URL imageURL = cldr.getResource(filename); 
+        
+        try{  
+            ImageIcon icon = new ImageIcon(imageURL);
+            this.image = icon.getImage();
+        }catch(NullPointerException ex){           
             System.out.println(ex);
+            System.out.println("FileName: "+ filename);
+            System.out.println("Path: "+ imageURL);
         }
     }
 

@@ -4,11 +4,10 @@ import java.awt.*;
 public class ImagePanelTester {
     public static void main(String[] args)
     {
-        String dronePath = ".DroneGame/drone.jpg";
-        String missilePath = "missile.png";
-        String fullpath = "C:\\Users\\Tyler\\IdeaProjects\\CS151-Project\\DroneGame\\src\\missile.png";
+        String droneName = "drone.jpg";
+        String missileName = "missile.png";
 
-        ImagePanel contentPane= new ImagePanel(fullpath,0,0);
+        ImagePanel contentPane= new ImagePanel(missileName,0,0);
 
 //        contentPane.setOpaque(true);
         contentPane.setLayout(new GridBagLayout());

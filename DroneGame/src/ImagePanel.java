@@ -9,6 +9,8 @@ public class ImagePanel extends JPanel {
     private Image image;
     private int x;
     private int y;
+    private int imageHeight;
+    private int imageWidth;
 
     public ImagePanel(String filename,int x,int y){                  
         
@@ -27,12 +29,21 @@ public class ImagePanel extends JPanel {
             System.out.println("Path: "+ imageURL);
         }
     }
+
+    public void setImageSizes(){
+        this.imageWidth = this.image.getWidth(null);
+        this.imageHeight = this.image.getHeight(null);
+    }
+
+    public Image getImage(){
+        return this.image;
+    }
     public void moveUp(int speed){
-        this.y += speed;
+        this.y -= speed;
     }
 
     public void moveDown(int speed){
-        this.y -= speed;
+        this.y += speed;
     }
 
     public void moveLeft(int speed){

@@ -1,2 +1,9 @@
-public class Airplane {
+import javax.swing.*;
+
+public class Airplane{
+
+
+
+
+
 }

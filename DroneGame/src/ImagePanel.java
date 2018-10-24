@@ -27,7 +27,29 @@ public class ImagePanel extends JPanel {
             System.out.println("Path: "+ imageURL);
         }
     }
+    public void moveUp(int speed){
+        this.y += speed;
+    }
 
+    public void moveDown(int speed){
+        this.y -= speed;
+    }
+
+    public void moveLeft(int speed){
+        this.x -= speed;
+    }
+
+    public void moveRight(int speed){
+        this.x += speed;
+    }
+
+    public int getX(){
+        return x;
+    }
+
+    public int getY(){
+        return y;
+    }
     public void changeX(int newX){
         x = newX;
     }

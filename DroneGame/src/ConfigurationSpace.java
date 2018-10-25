@@ -16,7 +16,7 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.jpg";
-    private final int TIMER_DELAY = 10;
+    private final int TIMER_DELAY = 100;//100 ms
 
     /**
      * The constructor for the board

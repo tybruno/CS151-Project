@@ -1,26 +1,95 @@
-public class Drone {
+import java.awt.event.KeyEvent;
 
-    private int movementSpeed;
-    private ImagePanel image;
+/**
+ * Creates the drone object
+ * This tutorial helped us make this class http://zetcode.com/tutorials/javagamestutorial/movingsprites/
+ */
+public class Drone extends ImagePanel {
+    private int newX;
+    private int newY;
 
-    public Drone(String imagePath,int startingX, int startingY,int movementSpeed){
-        this.image = new ImagePanel(imagePath,startingX,startingY);
-        this.movementSpeed = movementSpeed;
+    /**
+     * Drone constructor
+     *
+     * @param imagePath File path to drone image
+     * @param startingX Starting X position of the image
+     * @param startingY Starting y position of the image
+     */
+    public Drone(String imagePath, int startingX, int startingY) {
+        super(imagePath, startingX, startingY);
+        setImageSizes();
     }
 
-    public void moveUp(){
-        this.image.moveUp(movementSpeed);
-    }
-    public void moveDown(){
-        this.image.moveDown(movementSpeed);
+    /**
+     * Event function that checks when
+     * the key is released. when the key
+     * is released, reset the new y and new x values
+     *
+     * @param e key event that is triggered
+     */
+    public void keyReleased(KeyEvent e) {
+        int key = e.getKeyCode();
+
+        //key up
+        if (key == KeyEvent.VK_UP) {
+            this.newY = 0;
+        }
+
+        //key down
+        if (key == KeyEvent.VK_DOWN) {
+            this.newY = 0;
+        }
+
+        //key left
+        if (key == KeyEvent.VK_LEFT) {
+            this.newX = 0;
+        }
+
+        //key right
+        if (key == KeyEvent.VK_RIGHT) {
+            this.newX = 0;
+        }
+
     }
 
-    public void moveLeft(){
-        this.image.moveLeft(movementSpeed);
+    /**
+     * Event function that checks when
+     * the key is pressed. when the key
+     * is pressed, update the new x or y value with new position (by 1)
+     *
+     * @param e
+     */
+    public void keyPressed(KeyEvent e) {
+
+        int key = e.getKeyCode();
+
+        if (key == KeyEvent.VK_UP) {
+            this.newY = -1;
+        }
+
+        if (key == KeyEvent.VK_DOWN) {
+            this.newY = 1;
+
+        }
+
+        if (key == KeyEvent.VK_LEFT) {
+            this.newX = -1;
+        }
+
+        if (key == KeyEvent.VK_RIGHT) {
+            this.newX = 1;
+        }
+
+
     }
 
-    public void moveRight(){
-        this.image.moveRight(movementSpeed);
+    /**
+     * Moves the object by updating the new x and y values for the image
+     */
+    public void move() {
+        x += newX;
+        y += newY;
     }
+
 
 }

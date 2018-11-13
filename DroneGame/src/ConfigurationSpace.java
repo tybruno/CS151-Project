@@ -15,9 +15,12 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     private Drone drone;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
-    private final String DRONE_PATH = "drone.jpg";
-    private final int TIMER_DELAY = 100;//100 ms
+    private final String DRONE_PATH = "drone.png";
+    private final int TIMER_DELAY = 16;// 16.666 ms = 60fps
 
+    private final int NUMBEROFCLOUDS = 10;
+    private Cloud[] cloud = new Cloud[NUMBEROFCLOUDS] ;  
+    
     /**
      * The constructor for the board
      */
@@ -25,10 +28,15 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
 
         addKeyListener(new keysListener());
         setFocusable(true);
-        setBackground(Color.BLUE);
+        setBackground(new Color(135,206,235));
 //        setDoubleBuffered(true);
         this.drone = new Drone(DRONE_PATH, STARTING_X, STARTING_Y);
-
+        
+        //clouds
+        for(int i=0; i < NUMBEROFCLOUDS; i++){
+            this.cloud[i] = new Cloud();
+        }
+        
         //need this so we can move the drone
         timer = new Timer(TIMER_DELAY, this);
         timer.start();
@@ -71,12 +79,16 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
         Graphics2D g2 = (Graphics2D) g;
-        g2.drawImage(drone.getImage(), drone.getX(), drone.getY(), this);
-//        Toolkit.getDefaultToolkit().sync();
 
-
+        //drawing clouds
+        for(int i=0; i < NUMBEROFCLOUDS; i++){
+            cloud[i].redraw(g2, this);
+        }        
+        
+        
+        //drawing drone 
+        g2.drawImage(drone.getImage(), drone.getX(), drone.getY(), 204, 204, this);
     }
 
     /**

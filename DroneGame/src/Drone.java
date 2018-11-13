@@ -64,20 +64,20 @@ public class Drone extends ImagePanel {
         int key = e.getKeyCode();
 
         if (key == KeyEvent.VK_UP) {
-            this.newY = -1;
+            this.newY = -5;
         }
 
         if (key == KeyEvent.VK_DOWN) {
-            this.newY = 1;
+            this.newY = 5;
 
         }
 
         if (key == KeyEvent.VK_LEFT) {
-            this.newX = -1;
+            this.newX = -5;
         }
 
         if (key == KeyEvent.VK_RIGHT) {
-            this.newX = 1;
+            this.newX = 5;
         }
 
 

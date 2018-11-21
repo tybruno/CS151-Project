@@ -6,6 +6,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.Timer;
 
+import static java.awt.Color.white;
+
 /**
  * Creates the Board objeect
  * This tutorial helped us make this class http://zetcode.com/tutorials/javagamestutorial/movingsprites/
@@ -13,11 +15,12 @@ import javax.swing.Timer;
 public class ConfigurationSpace extends JPanel implements ActionListener {
     private Timer timer;
     private Drone drone;
+    private Airplane airplane;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.png";
     private final int TIMER_DELAY = 16;// 16.666 ms = 60fps
-
+    private final String AIRPLANE_PATH = "missile.png";
     private final int NUMBEROFCLOUDS = 10;
     private Cloud[] cloud = new Cloud[NUMBEROFCLOUDS] ;  
     
@@ -31,7 +34,7 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         setBackground(new Color(135,206,235));
 //        setDoubleBuffered(true);
         this.drone = new Drone(DRONE_PATH, STARTING_X, STARTING_Y);
-        
+        this.airplane = new Airplane(AIRPLANE_PATH, 500,10);
         //clouds
         for(int i=0; i < NUMBEROFCLOUDS; i++){
             this.cloud[i] = new Cloud();
@@ -89,6 +92,10 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         
         //drawing drone 
         g2.drawImage(drone.getImage(), drone.getX(), drone.getY(), 204, 204, this);
+
+        //drawing airplane
+        g2.drawImage(airplane.getImage(), airplane.getX(), airplane.getY(), 100, 100, this);
+
     }
 
     /**
@@ -102,6 +109,7 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         drone.move();
         repaint();
+        airplane.move();
     }
 
 

@@ -13,6 +13,7 @@ import javax.swing.Timer;
 public class ConfigurationSpace extends JPanel implements ActionListener {
     private Timer timer;
     private Drone drone;
+    private TimerImplementation timerImpl;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.png";
@@ -31,7 +32,8 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         setBackground(new Color(135,206,235));
 //        setDoubleBuffered(true);
         this.drone = new Drone(DRONE_PATH, STARTING_X, STARTING_Y);
-        
+        this.timerImpl = new TimerImplementation();
+        timerImpl.setBounds(1, 100, 75, 75);
         //clouds
         for(int i=0; i < NUMBEROFCLOUDS; i++){
             this.cloud[i] = new Cloud();
@@ -85,8 +87,8 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         for(int i=0; i < NUMBEROFCLOUDS; i++){
             cloud[i].redraw(g2, this);
         }        
-        
-        
+
+
         //drawing drone 
         g2.drawImage(drone.getImage(), drone.getX(), drone.getY(), 204, 204, this);
     }

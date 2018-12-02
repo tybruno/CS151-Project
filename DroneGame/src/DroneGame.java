@@ -15,7 +15,6 @@ public class DroneGame extends JFrame{
     public DroneGame(){
         add(new ConfigurationSpace());
         setSize(960,540);
-
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

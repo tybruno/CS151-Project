@@ -4,8 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.text.Format;
-import java.text.SimpleDateFormat;
 import javax.swing.Timer;
 
 /**
@@ -15,39 +13,41 @@ import javax.swing.Timer;
 public class ConfigurationSpace extends JPanel implements ActionListener {
     private Timer timer;
     private Drone drone;
-    private TimerImplementation timerImpl;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.png";
     private final int TIMER_DELAY = 16;// 16.666 ms = 60fps
-    private long previousTime;
+
     private final int NUMBEROFCLOUDS = 10;
-    private Cloud[] cloud = new Cloud[NUMBEROFCLOUDS] ;  
+    private Cloud[] cloud = new Cloud[NUMBEROFCLOUDS];
+    
+    private final int NUMBEROFPLANES = 10;
+    private Plane[] planes = new Plane[NUMBEROFPLANES] ;      
     
     /**
      * The constructor for the board
      */
     public ConfigurationSpace() {
-        previousTime = System.currentTimeMillis();
+
         addKeyListener(new keysListener());
         setFocusable(true);
         setBackground(new Color(135,206,235));
 //        setDoubleBuffered(true);
         this.drone = new Drone(DRONE_PATH, STARTING_X, STARTING_Y);
-        this.timerImpl = new TimerImplementation();
-        timerImpl.setBounds(1, 100, 75, 75);
-        add(timerImpl);
+        
         //clouds
         for(int i=0; i < NUMBEROFCLOUDS; i++){
             this.cloud[i] = new Cloud();
         }
-
+        
+        //planes
+        for(int i=0; i < NUMBEROFPLANES; i++){
+            this.planes[i] = new Plane();
+        }        
+        
         //need this so we can move the drone
         timer = new Timer(TIMER_DELAY, this);
         timer.start();
-
-
-
     }
 
     /**
@@ -93,10 +93,14 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         for(int i=0; i < NUMBEROFCLOUDS; i++){
             cloud[i].redraw(g2, this);
         }        
-
-
+            
         //drawing drone 
         g2.drawImage(drone.getImage(), drone.getX(), drone.getY(), 204, 204, this);
+        
+        //drawing planes
+        for(int i=0; i < NUMBEROFPLANES; i++){
+            planes[i].redraw(g2, this);
+        }          
     }
 
     /**

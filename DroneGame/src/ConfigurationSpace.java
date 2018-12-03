@@ -13,11 +13,12 @@ import javax.swing.Timer;
 public class ConfigurationSpace extends JPanel implements ActionListener {
     private Timer timer;
     private Drone drone;
+    private TimerImplementation timerImpl;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.png";
     private final int TIMER_DELAY = 16;// 16.666 ms = 60fps
-
+    private long previousTime;
     private final int NUMBEROFCLOUDS = 10;
     private Cloud[] cloud = new Cloud[NUMBEROFCLOUDS];
     
@@ -28,13 +29,15 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
      * The constructor for the board
      */
     public ConfigurationSpace() {
-
+        previousTime = System.currentTimeMillis();
         addKeyListener(new keysListener());
         setFocusable(true);
         setBackground(new Color(135,206,235));
 //        setDoubleBuffered(true);
         this.drone = new Drone(DRONE_PATH, STARTING_X, STARTING_Y);
-        
+        this.timerImpl = new TimerImplementation();
+        timerImpl.setBounds(1,100,75,75);
+        add(timerImpl);
         //clouds
         for(int i=0; i < NUMBEROFCLOUDS; i++){
             this.cloud[i] = new Cloud();

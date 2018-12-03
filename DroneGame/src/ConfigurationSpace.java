@@ -15,6 +15,9 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     private Drone drone;
     private TimerImplementation timerImpl;
     private Scores score;
+    private int scoreOfGame;
+    private int totalGames;
+    private int collision;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.png";
@@ -54,6 +57,7 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         //need this so we can move the drone
         timer = new Timer(TIMER_DELAY, this);
         timer.start();
+        checkCollision();
     }
 
     /**
@@ -120,6 +124,28 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         drone.move();
         repaint();
+        checkCollision();
+    }
+
+    public void checkCollision() {
+
+        Rectangle r3 = drone.getBounds();
+
+        for (Plane plane : planes) {
+
+            Rectangle r2 = plane.getBounds();
+
+            if (r3.intersects(r2)) {
+
+                collision++;
+            }
+            if (collision <= 2){
+                scoreOfGame++;
+            }
+            else if(collision>2){
+                totalGames++;
+            }
+        }
     }
 
 

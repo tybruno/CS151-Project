@@ -24,7 +24,7 @@ public class Scores extends JLabel {
                 won++;
                 totalGames++;
 
-                label.setText("Score: " + Integer.toString(won) + " Total games played: " + Integer.toString(totalGames));
+                label.setText("Score: " + Integer.toString(won) + " out of " + Integer.toString(totalGames));
                 //label.setText("Total Games Played: " + Integer.toString(totalGames));
                 winner = true;
             }
@@ -35,7 +35,7 @@ public class Scores extends JLabel {
 
     public Scores()
     {
-        label.setText("Score: " + won + " Total games played: " + totalGames);
+        label.setText("Score: " + won + " out of " + totalGames);
         timer.scheduleAtFixedRate(task, 1000, 1000);
         this.setBounds(485, 370, 150, 150);
     }

@@ -14,6 +14,7 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     private Timer timer;
     private Drone drone;
     private TimerImplementation timerImpl;
+    private Scores score;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.png";
@@ -38,6 +39,8 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         this.timerImpl = new TimerImplementation();
         timerImpl.setBounds(1,100,75,75);
         add(timerImpl);
+        score = new Scores();
+        add(score);
         //clouds
         for(int i=0; i < NUMBEROFCLOUDS; i++){
             this.cloud[i] = new Cloud();

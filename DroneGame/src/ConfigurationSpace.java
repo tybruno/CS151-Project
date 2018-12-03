@@ -128,15 +128,12 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     }
 
     public void checkCollision() {
-
         Rectangle r3 = drone.getBounds();
-
+        System.out.println(r3);
         for (Plane plane : planes) {
-
             Rectangle r2 = plane.getBounds();
-
+            System.out.println(r2);
             if (r3.intersects(r2)) {
-
                 collision++;
             }
             if (collision <= 2){

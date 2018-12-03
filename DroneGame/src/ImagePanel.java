@@ -22,7 +22,6 @@ public class ImagePanel extends JPanel {
         
         this.x = x;
         this.y = y;
-            
         ClassLoader cldr = this.getClass().getClassLoader();
         java.net.URL imageURL = cldr.getResource(filename);
         
@@ -55,6 +54,7 @@ public class ImagePanel extends JPanel {
     public void setImageSizes(){
         this.imageWidth = this.image.getWidth(null);
         this.imageHeight = this.image.getHeight(null);
+        this.setBounds(this.x,this.y,this.imageWidth,this.imageHeight);
     }
 
     /**

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f87a31e1-18cf-4e4b-b076-f966ad85db3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DroneGame/src/ConfigurationSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/DroneGame/src/ConfigurationSpace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DroneGame/src/Scores.java" beforeDir="false" afterPath="$PROJECT_DIR$/DroneGame/src/Scores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DroneGame/src/DPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DroneGame/src/ImagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DroneGame/src/ImagePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DroneGame/src/MovingPlain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DroneGame/src/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/DroneGame/src/Plane.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,20 +142,44 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-573821978">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="267" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="267" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DroneGame/src/Scores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-190">
+            <state relative-caret-position="408">
               <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#294#730#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,9 +188,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DroneGame/src/Airplane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="119">
+              <caret line="7" column="16" selection-start-line="7" selection-end-line="8" />
               <folding>
+                <element signature="e#369#370#0" expanded="true" />
                 <element signature="e#394#395#0" expanded="true" />
               </folding>
             </state>
@@ -172,17 +201,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DroneGame/src/Cloud.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state relative-caret-position="85">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DroneGame/src/ConfigurationSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="123">
+              <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/java/awt/Component.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32674">
+              <caret line="2240" column="34" lean-forward="true" selection-start-line="2240" selection-start-column="34" selection-end-line="2240" selection-end-column="34" />
+              <folding>
+                <element signature="e#76311#76312#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +232,7 @@
         <entry file="file://$PROJECT_DIR$/DroneGame/src/ImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+              <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-end-line="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,11 +240,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DroneGame/src/DroneGame.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DroneGame/src/Plane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="273">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DroneGame/src/ImagePanelTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -214,8 +264,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DroneGame/src/Drone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="120">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -236,6 +286,9 @@
       <find>action</find>
       <find>actionPerformed</find>
       <find>out</find>
+      <find>setImage</find>
+      <find>drone</find>
+      <find>checkColl</find>
     </findStrings>
   </component>
   <component name="Git.Rebase.Settings">
@@ -263,6 +316,8 @@
         <option value="$PROJECT_DIR$/DroneGame/src/DroneGame.java" />
         <option value="$PROJECT_DIR$/DroneGame/src/Scores.java" />
         <option value="$PROJECT_DIR$/DroneGame/src/ConfigurationSpace.java" />
+        <option value="$PROJECT_DIR$/DroneGame/src/ImagePanel.java" />
+        <option value="$PROJECT_DIR$/DroneGame/src/Plane.java" />
       </list>
     </option>
   </component>
@@ -274,9 +329,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="648" />
-    <option name="y" value="190" />
+    <option name="y" value="189" />
     <option name="width" value="1200" />
-    <option name="height" value="970" />
+    <option name="height" value="971" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -284,21 +339,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Project cs 151" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project cs 151" type="462c0819:PsiDirectoryNode" />
+              <item name="CS151-Project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS151-Project1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project cs 151" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project cs 151" type="462c0819:PsiDirectoryNode" />
+              <item name="CS151-Project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS151-Project1" type="462c0819:PsiDirectoryNode" />
               <item name="DroneGame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project cs 151" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project cs 151" type="462c0819:PsiDirectoryNode" />
+              <item name="CS151-Project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS151-Project1" type="462c0819:PsiDirectoryNode" />
               <item name="DroneGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -306,7 +362,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -314,7 +369,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543829671929" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543877686106" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -331,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ImagePanelTester">
+  <component name="RunManager" selected="Application.DroneGame">
     <configuration name="Airplane" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Airplane" />
       <module name="CS151-Project" />
@@ -369,8 +424,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ImagePanelTester" />
         <item itemvalue="Application.DroneGame" />
+        <item itemvalue="Application.ImagePanelTester" />
         <item itemvalue="Application.TimerExample" />
         <item itemvalue="Application.DroneGame" />
         <item itemvalue="Application.TimerExample" />
@@ -392,6 +447,7 @@
       <workItem from="1541960047985" duration="2850000" />
       <workItem from="1542060608583" duration="321000" />
       <workItem from="1543789229699" duration="3173000" />
+      <workItem from="1543868914911" duration="3031000" />
     </task>
     <task id="LOCAL-00001" summary="fixed timer">
       <created>1543802752197</created>
@@ -411,7 +467,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16308000" />
+    <option name="totallyTimeSpent" value="19339000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,10 +479,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14630872" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23238866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -435,7 +491,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22978723" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22942206" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -533,19 +589,6 @@
     <entry file="file://$PROJECT_DIR$/DroneGame/src/ImagePanelTester.class" />
     <entry file="file://$PROJECT_DIR$/DroneGame/src/Timer.java" />
     <entry file="file://$PROJECT_DIR$/DroneGame/src/Airplane.class" />
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/DPoint.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/ImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/javax/swing/Timer.java" />
     <entry file="file://$PROJECT_DIR$/DroneGame/src/TimerExample.java" />
     <entry file="file://$PROJECT_DIR$/DroneGame/src/drone.jpg">
@@ -553,37 +596,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DroneGame/src/drone.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/Cloud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/Airplane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="e#394#395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/MovingPlain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/Drone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DroneGame/src/TimerImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -597,10 +609,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/MovingPlain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DroneGame/src/DroneGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="217">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/ImagePanelTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -609,29 +638,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DroneGame/src/Scores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
+        <state relative-caret-position="408">
           <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#294#730#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/Plane.java">
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.desktop/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="32674">
+          <caret line="2240" column="34" lean-forward="true" selection-start-line="2240" selection-start-column="34" selection-end-line="2240" selection-end-column="34" />
+          <folding>
+            <element signature="e#76311#76312#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DroneGame/src/ImagePanelTester.java">
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/DPoint.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/Drone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/ImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-end-line="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -640,8 +678,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DroneGame/src/ConfigurationSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="123">
+          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/Cloud.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/Airplane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-end-line="8" />
+          <folding>
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DroneGame/src/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>

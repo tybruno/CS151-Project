@@ -19,12 +19,16 @@ public class Plane extends ImagePanel{
     
     public Plane(){
         super("plane.png", 2000, 2000);
-        
+
         Random rand = new Random(); 
         x = rand.nextInt(4000);
         y = rand.nextInt(300);
-        size = (1 + rand.nextFloat())*2;      
+        size = (1 + rand.nextFloat())*2;
+
+        setImageSizes();
+
     }
+
     
     public void redraw(Graphics2D g, ConfigurationSpace cs){
         x -= 1*size;      

@@ -46,6 +46,7 @@ public class ImagePanel extends JPanel {
 //        int x = (getWidth() - image.getWidth())/2;
 //        int y = (getHeight() - image.getHeight())/2;
         g.drawImage(image,x,y,this);
+        this.setBounds(this.x,this.y,this.imageWidth,this.imageHeight);
     }
 
     /**

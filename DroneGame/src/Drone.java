@@ -89,6 +89,8 @@ public class Drone extends ImagePanel {
     public void move() {
         x += newX;
         y += newY;
+        setImageSizes();
+
     }
 
 

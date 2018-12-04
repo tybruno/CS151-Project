@@ -57,7 +57,6 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         //need this so we can move the drone
         timer = new Timer(TIMER_DELAY, this);
         timer.start();
-        checkCollision();
     }
 
     /**
@@ -110,7 +109,9 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         //drawing planes
         for(int i=0; i < NUMBEROFPLANES; i++){
             planes[i].redraw(g2, this);
-        }          
+        }
+        checkCollision();
+
     }
 
     /**
@@ -124,16 +125,21 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         drone.move();
         repaint();
-        checkCollision();
+//        checkCollision();
     }
 
     public void checkCollision() {
         Rectangle r3 = drone.getBounds();
-        System.out.println(r3);
+//        System.out.println(r3);
+        int collision =0;
+        int scoreOfGame =0;
+        int totalGames =0;
         for (Plane plane : planes) {
             Rectangle r2 = plane.getBounds();
-            System.out.println(r2);
+
             if (r3.intersects(r2)) {
+                System.out.println(r3);
+                System.out.println(r2);
                 collision++;
             }
             if (collision <= 2){
@@ -142,7 +148,10 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
             else if(collision>2){
                 totalGames++;
             }
+
         }
+        score.setText(String.valueOf(scoreOfGame));
+
     }
 
 

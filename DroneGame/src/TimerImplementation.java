@@ -9,22 +9,28 @@ public class TimerImplementation extends JLabel {
 
     public boolean bool = false;
 
-    int sec = 30;
-    int min = 1;
+    static int sec = 30;
+    static int min = 1;
 
     Timer timer = new Timer();
     TimerTask task = new TimerTask() {
         public void run() {
-            if (sec > 0)
+            int sec = TimerImplementation.sec;
+            int min = TimerImplementation.min; 
+            
+            if (sec > 0) {
                 sec--;
-            else if(min==1) {
+            } else if(min==1) {
                 min--;
                 sec = 59;
-            }
-            else{
+            } else {
                 min=0;
                 sec=0;
             }
+            
+            TimerImplementation.sec = sec;
+            TimerImplementation.min = min;
+            
             if (sec < 10 && min < 10)
                 label.setText("Timer: 0" + Integer.toString(min) + ":0" + Integer.toString(sec));
             else if (min < 10)
@@ -48,8 +54,16 @@ public class TimerImplementation extends JLabel {
 //		this.setBounds(500, 400, 75, 75);
     }
     public void resetTimer(){
-        sec = 30;
-        min = 1;
+        TimerImplementation.sec = 30;
+        TimerImplementation.min = 1;
+    }
+    
+    public boolean isTimeOut(){
+        if(TimerImplementation.min <= 0 && TimerImplementation.sec <= 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 

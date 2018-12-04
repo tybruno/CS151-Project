@@ -16,7 +16,7 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     private TimerImplementation timerImpl;
     private Scores score;
     private int scoreOfGame = 0;
-    private int totalGames = 0;
+    private int totalGames = 1;
     private int collision = 0;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
@@ -125,7 +125,6 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         drone.move();
         repaint();
-//        checkCollision();
     }
 
     public void checkCollision() {
@@ -135,29 +134,39 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
             int[] boxDrone = drone.getBox();
             Rectangle r1;
             r1 = new  Rectangle(boxDrone[0], boxDrone[1], boxDrone[2], boxDrone[3]);
-            g2.drawRect(boxDrone[0], boxDrone[1], boxDrone[2], boxDrone[3]);
+            //g2.drawRect(boxDrone[0], boxDrone[1], boxDrone[2], boxDrone[3]);
 
         for (Plane plane : planes) {
-            //Rectangle r2 = plane.getBounds();
+            if(plane.collided){
+                //skip planse we arleady counted
+                continue;
+            }
             
             int[] box = plane.getBox();
             Rectangle r2;
             r2 = new  Rectangle(box[0], box[1], box[2], box[3]);
-            g2.drawRect(box[0], box[1], box[2], box[3]);
+            //g2.drawRect(box[0], box[1], box[2], box[3]);
             
             if (r1.intersects(r2)) {
                 collision++;
+                plane.collided = true;
             }
-            if (collision <= 2){
-                scoreOfGame++;
-            }
-            else if(collision>2){
-                totalGames++;
-            }
-
         }
-        score.setText(String.valueOf(scoreOfGame));
-
+        
+        
+        if (collision >= 5){
+            totalGames++;
+            collision = 0;
+            timerImpl.resetTimer();
+        }
+        
+        if(timerImpl.isTimeOut()) {
+            totalGames++;
+            scoreOfGame++;
+            timerImpl.resetTimer();
+        }        
+                
+        score.setText(" | Health: "+ Integer.toString(5-collision) +" | Score: " + Integer.toString(scoreOfGame) + " out of " + Integer.toString(totalGames));
     }
 
 

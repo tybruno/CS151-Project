@@ -15,6 +15,7 @@ public class Scores extends JLabel {
     TimerTask task = new TimerTask() {
         public void run()
         {
+            
             winner = false;
             if(sec < 90)
                 sec++;
@@ -28,7 +29,6 @@ public class Scores extends JLabel {
                 //label.setText("Total Games Played: " + Integer.toString(totalGames));
                 winner = true;
             }
-
 
         }
     };

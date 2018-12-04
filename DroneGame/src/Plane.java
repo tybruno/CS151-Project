@@ -16,7 +16,7 @@ public class Plane extends ImagePanel{
 //    public int x = 0;
 //    public int y = 0;
     public double size = 0;
-
+    public boolean collided = false;
 
     public Plane(){
 
@@ -37,6 +37,7 @@ public class Plane extends ImagePanel{
         if(x <= - size*320){
             Random rand = new Random();            
             x = 2000 + rand.nextInt(2000);
+            collided = false;
         }
         
         g.drawImage(this.getImage(), x, y, (int)size*80, (int)size*52, cs);

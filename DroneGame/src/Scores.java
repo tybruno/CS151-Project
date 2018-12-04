@@ -42,10 +42,11 @@ public class Scores extends JLabel {
 
     public void reset()
     {
-
+        winner = false;
+        sec = 0;
     }
 
-    public boolean getWinner()
+    public boolean win()
     {
         return winner;
     }
@@ -55,5 +56,6 @@ public class Scores extends JLabel {
         totalGames++;
         label.setText("Score: " + won);
         label.setText("Total Games played: " + totalGames);
+        sec = 0;
     }
 }

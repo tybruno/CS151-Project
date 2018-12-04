@@ -93,5 +93,15 @@ public class Drone extends ImagePanel {
 
     }
 
+    public int getY(){
+        return y;
+    }
+    public int getX(){
+        return x;
+    }
+    public void reset(){
+        x -= 20;
+    }
+
 
 }

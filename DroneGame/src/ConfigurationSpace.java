@@ -33,6 +33,7 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
      * The constructor for the board
      */
     public ConfigurationSpace() {
+        Tries tries = new Tries();
         previousTime = System.currentTimeMillis();
         addKeyListener(new keysListener());
         setFocusable(true);
@@ -57,6 +58,28 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         //need this so we can move the drone
         timer = new Timer(TIMER_DELAY, this);
         timer.start();
+
+        Rectangle r3 = drone.getBounds();
+        for (Plane plane : planes) {
+            Rectangle r2 = plane.getBounds();
+
+            if(r3.intersects(r2)){
+                drone.reset();
+                tries.crash();
+            }
+
+            if(tries.getTries()==0){
+                tries.reload();
+                timerImpl.resetTimer();
+                score.gameOver();
+            }
+
+            if(score.win()){
+                tries.win();
+                timerImpl.resetTimer();
+                drone.reset();
+            }
+        }
     }
 
     /**
@@ -110,7 +133,6 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         for(int i=0; i < NUMBEROFPLANES; i++){
             planes[i].redraw(g2, this);
         }
-        checkCollision();
 
     }
 
@@ -128,31 +150,15 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
 //        checkCollision();
     }
 
-    public void checkCollision() {
-        Rectangle r3 = drone.getBounds();
-//        System.out.println(r3);
-        int collision =0;
-        int scoreOfGame =0;
-        int totalGames =0;
-        for (Plane plane : planes) {
-            Rectangle r2 = plane.getBounds();
-
-            if (r3.intersects(r2)) {
-                System.out.println(r3);
-                System.out.println(r2);
-                collision++;
-            }
-            if (collision <= 2){
-                scoreOfGame++;
-            }
-            else if(collision>2){
-                totalGames++;
-            }
-
-        }
-        score.setText(String.valueOf(scoreOfGame));
-
-    }
+//    public void checkCollision() {
+//        //Rectangle r3 = drone.getBounds();
+////        System.out.println(r3);
+//        //int collision =0;
+//        //int scoreOfGame =0;
+//        //int totalGames =0;
+//
+//
+//    }
 
 
 }

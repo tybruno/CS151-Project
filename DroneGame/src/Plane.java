@@ -42,4 +42,21 @@ public class Plane extends ImagePanel{
         g.drawImage(this.getImage(), x, y, (int)size*80, (int)size*52, cs);
         setImageSizes();
     }
+
+    public boolean collision(Drone drone)
+    {
+        //bottom of plane
+        if (this.getY()+20 < drone.getY()-drone.getHeight()
+                || this.getY()-this.getHeight()-50 > drone.getY()) {
+            //top of plane
+            return false;
+        }
+        //back of plane
+        if (this.getX()+this.getHeight()-50 < drone.getX()-drone.getHeight()
+                || this.getX()-this.getHeight() > drone.getX()+drone.getWidth())
+        {
+            return false;
+        }
+        return true;
+    }
 }

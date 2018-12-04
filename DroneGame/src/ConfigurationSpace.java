@@ -15,9 +15,9 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     private Drone drone;
     private TimerImplementation timerImpl;
     private Scores score;
-    private int scoreOfGame;
-    private int totalGames;
-    private int collision;
+    private int scoreOfGame = 0;
+    private int totalGames = 0;
+    private int collision = 0;
     private final int STARTING_X = 20;
     private final int STARTING_Y = 20;
     private final String DRONE_PATH = "drone.png";
@@ -110,8 +110,8 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
         for(int i=0; i < NUMBEROFPLANES; i++){
             planes[i].redraw(g2, this);
         }
+        
         checkCollision();
-
     }
 
     /**
@@ -129,17 +129,23 @@ public class ConfigurationSpace extends JPanel implements ActionListener {
     }
 
     public void checkCollision() {
-        Rectangle r3 = drone.getBounds();
-//        System.out.println(r3);
-        int collision =0;
-        int scoreOfGame =0;
-        int totalGames =0;
-        for (Plane plane : planes) {
-            Rectangle r2 = plane.getBounds();
+            Graphics g = super.getGraphics();
+            Graphics2D g2 = (Graphics2D) g;
+        
+            int[] boxDrone = drone.getBox();
+            Rectangle r1;
+            r1 = new  Rectangle(boxDrone[0], boxDrone[1], boxDrone[2], boxDrone[3]);
+            g2.drawRect(boxDrone[0], boxDrone[1], boxDrone[2], boxDrone[3]);
 
-            if (r3.intersects(r2)) {
-                System.out.println(r3);
-                System.out.println(r2);
+        for (Plane plane : planes) {
+            //Rectangle r2 = plane.getBounds();
+            
+            int[] box = plane.getBox();
+            Rectangle r2;
+            r2 = new  Rectangle(box[0], box[1], box[2], box[3]);
+            g2.drawRect(box[0], box[1], box[2], box[3]);
+            
+            if (r1.intersects(r2)) {
                 collision++;
             }
             if (collision <= 2){

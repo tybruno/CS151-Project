@@ -93,5 +93,13 @@ public class Drone extends ImagePanel {
 
     }
 
-
+    public int[] getBox(){
+        int[] box = new int[4];
+        box[0] = x+50;             //X position
+        box[1] = y+50;             //Y position
+        box[2] = 100;           //X Size
+        box[3] = 100;           //Y size
+        
+        return box;
+    }
 }

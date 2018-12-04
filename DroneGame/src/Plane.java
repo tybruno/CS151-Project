@@ -23,7 +23,7 @@ public class Plane extends ImagePanel{
         super("plane.png", 2000, 2000);
         Random rand = new Random();
 
-        x = rand.nextInt(4000);
+        x = 1000+rand.nextInt(4000);
         y = rand.nextInt(300);
         size = (1 + rand.nextFloat())*2;
 
@@ -41,5 +41,15 @@ public class Plane extends ImagePanel{
         
         g.drawImage(this.getImage(), x, y, (int)size*80, (int)size*52, cs);
         setImageSizes();
+    }
+    
+    public int[] getBox(){
+        int[] box = new int[4];
+        box[0] = x + ((int)size*10);    //X position
+        box[1] = y + ((int)size*5);    //Y position
+        box[2] = (int)size*60;          //X Size
+        box[3] = (int)size*42;          //Y size
+        
+        return box;
     }
 }

@@ -1,3 +1,4 @@
 # CS151-Project
 
-Change
+To run the game run DroneGame.java
+
